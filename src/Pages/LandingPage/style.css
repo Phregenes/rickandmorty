@@ -1,0 +1,19 @@
+*{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+.componentcenter{
+  height: 50vh;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+}
+.particles{
+  background-image: url(../../assets/img/stars.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
