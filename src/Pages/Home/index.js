@@ -20,7 +20,7 @@ class Home extends Component {
 
     return (
       <div>
-        <h1>Listar os Filmes</h1>
+        <h1>Listar os Episodios</h1>
         {episodes.map(episode => (
           <li key={episode.results}>
             <h2>
