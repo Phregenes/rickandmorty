@@ -4,14 +4,14 @@ import api from '../../api';
 class Home extends Component {
 
   state = {
-    filmes: [],
+    episodes: [],
   }
 
   async componentDidMount() {
     const response = await api.get('');
 
     this.setState({ episodes: response.data });
-    console.log(response.data)
+    // console.log(response.data)
   }
 
   render() {
@@ -22,14 +22,11 @@ class Home extends Component {
       <div>
         <h1>Listar os Filmes</h1>
         {episodes.map(episode => (
-          <li key={episode.id}>
+          <li key={episode.results}>
             <h2>
               <strong>Título: </strong>
-              {episode}
+              {episode.results.id}
             </h2>
-            {/* <p>
-              {filme.show.url}
-            </p> */}
 
           </li>
         ))}
