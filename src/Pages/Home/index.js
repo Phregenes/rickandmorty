@@ -11,7 +11,7 @@ class Home extends Component {
     const response = await api.get('');
 
     this.setState({ episodes: response.data });
-    // console.log(response.data)
+      console.log(response.data)
   }
 
   render() {
