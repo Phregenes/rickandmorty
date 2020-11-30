@@ -1,7 +1,7 @@
 *{
   margin: 0;
   padding: 0;
-  height: 100vh;
+
 }
 .componentcenter{
   height: 50vh;
@@ -16,4 +16,5 @@
   background-image: url(../../assets/img/stars.jpg);
   background-position: center;
   background-repeat: no-repeat;
+  height: 100vh;
 }

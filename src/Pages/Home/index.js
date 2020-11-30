@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import api from '../../api';
+import './styles.css';
 
 class Home extends Component {
 
   state = {
-    episodes: [],
+    episodes: {},
   }
 
   async componentDidMount() {
@@ -18,16 +19,22 @@ class Home extends Component {
 
     const { episodes } = this.state;
 
-    return (
-      <div>
-        <h1>Listar os Episodios</h1>
-        {episodes.map(episode => (
-          <li key={episode.results}>
-            <h2>
-              <strong>Título: </strong>
-              {episode.results.id}
-            </h2>
+    const { results = [] } = episodes;
+    console.log('aqui' , episodes.results , results )
 
+    return (
+      <div className="container">
+        {results.map(episode => (
+          <li key={episode.id} className = "episode">
+            <div className="container--person">
+              <img src={episode.image} alt={episode.name} className="episode--image"/>
+              <div className="characteristics">
+                <span>{ 'Name:' + episode.name }</span>
+                <span>{ 'status: '+ episode.status }</span>
+                <span>{ 'species: '+ episode.species }</span>
+                <span>{ 'species: '+ episode.gender }</span>
+              </div>
+            </div>
           </li>
         ))}
       </div>
